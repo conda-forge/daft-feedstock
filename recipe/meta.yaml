@@ -1,5 +1,5 @@
 {% set name = "daft" %}
-{% set version = "0.1.2" %}
+{% set version = "0.1.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/daft-{{ version }}.tar.gz
-  sha256: 3e77e0389ca539a5741a906bcdcaae462b68261d06b960b0c04498b695d312e5
+  sha256: b32620eef055a51f40e899bd11db6b4c8f4790d019d2e88f8f893150f2673598
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:
